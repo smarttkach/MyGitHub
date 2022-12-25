@@ -1,0 +1,263 @@
+/* CSS БОКСЫ И СЕЛЕКТОРЫ */
+
+        em, strong {
+            background-color: #29fd2f;
+            display: block; 
+            /* можно изменить тип бокса у HTML-элементов через свойство display. 
+            Например, если надо создать блочные элементы <em> и <strong> вместо строчных: display: block; обратно в строчный элемент: display: inline; */
+        }
+
+
+/*
+КОНТЕНТ, ОТСТУПЫ И ГРАНИЦЫ
+
+Content (Контент) – текст, изображения или любые другие медиа;
+
+Padding (Паддинг) – внутренний отступ, расстояние между контентом бокса и его границей;
+
+Margin (Марджин) – внешний отступ, расстояние между боксами;
+
+Border (Граница) – линия между внутренним и внешним отступом; 
+*/
+
+/* PADDING */
+
+        h1 {
+            padding: 50px;
+        }
+
+        /* Если нужно отредактировать только одну сторону элемента */
+        p {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+/* Для padding можно использовать любые единицы измерения, необязательно пиксели. 
+Например, em очень полезны для пропорционального изменения внутренних отступов и базового размера шрифта. 
+ */
+
+ /* если мы пропишем сразу четыре значения, то внутренние отступы можно будет менять для каждой стороны элемента отдельно. 
+ Значения padding интерпретируются друг за другом по часовой стрелке, начиная с верхнего отступа. */
+
+        p {
+            padding: 20px 0 20px 10px; /* Сверху 20px, справа 0, снизу 20px, слева 10px */
+        }
+
+
+/* 
+BORDER
+Чтобы добавить границу вокруг заголовка.
+Как и с padding, для свойства border существуют значения -top, -bottom, -left и -right.
+*/
+
+        h1 {
+            padding: 50px;
+            border: 1px solid #0b24fb;
+            border-radius: 5%; /* Закругление */
+            
+          }
+
+
+/* 
+MARGIN
+Чтобы добавить отступы вокруг каждого из элементов бокса:
+*/
+
+        p {
+            padding: 20px 0 20px 10px;
+            margin-bottom: 50px;
+        }
+
+
+    /* ВЕРТИКАЛЬНОЕ СХЛОПЫВАНИЕ ОТСТУПОВ */
+    
+    p {
+        padding: 20px 0 20px 10px;
+      
+        margin-top: 25px;
+        margin-bottom: 50px;
+      } 
+      /* В данном примере отступы схлопнутся до большего значения - 50px */
+      /* 
+      Чтобы избежать вертикального схлопывания отступов, нужно вставить невидимый элемент div: 
+      <div style="padding-top: 1px"></div> 
+      */
+
+
+
+
+/* 
+БОКСЫ 
+Чтобы определенным образом оформить веб-страницу, для таких целей существуют теги <div> и <span>.
+*/
+
+/* Например, кнопка */
+        div {
+            color: #FFF;
+            background-color: #5995DA;
+            font-weight: bold;
+            padding: 20px;
+            text-align: center;
+            border: 2px solid #5D6063;
+            border-radius: 5px;
+        
+            width: 200px;
+            box-sizing: border-box;   /* Можно также поставить Content-box */
+            margin: 20px auto;   /* Когда мы меняем значение правого и левого отступа блочного элемента на auto, блок автоматически выравнивается по центру по отношению к родительскому элементу. */
+            
+        }
+
+
+/* 
+Белая рамка вокруг страницы - это отступы, которые браузер добавляет по умолчанию. 
+При этом у разных браузеров есть разные стили по умолчанию, что делает затруднительным создание таблиц стилей, которые везде будут отображаться одинаково.
+Обычно такие стили по умолчанию меняют на универсальный CSS-селектор (*) 
+*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+
+/* 
+CSS СЕЛЕКТОРЫ
+Селекторы классов позволяют нам применять стили CSS к конкретным HTML-элементам. 
+<p class="synopsis">CSS-селекторы позволяют <em>выделять</em> отдельные HTML элементы внутри HTML-документа. Это <strong>супер</strong> полезная вещь.</p>
+Например:
+*/
+        .synopsis {
+            color: #7E8184;
+            font-style: italic;
+        }
+
+
+
+/* 
+ПСЕВДОКЛАССЫ
+Самые распространенные псевдоклассы:
+    :link – ссылка, которую пользователь не посещал;
+
+    :visited – ссылка, посещенная пользователем;
+
+    :hover – ссылка, на которую пользователь навел курсор;
+
+    :active – ссылка, на которую пользователь нажал.
+
+    Глава про Псевдоклассы - https://learn.m-c-s.xyz/player?course=html&lessonId=62bdd149e0a775d3f374bcf6
+*/
+
+
+
+        
+/* ДОБАВЛЕНИЕ ФОНОВОГО ИЗОБРАЖЕНИЯ */
+
+        div {
+            width: 800px;
+            height: 300px;
+        
+            background-image: url('images/hehe.png');
+            background-size: cover;                   /* добавление фона с максимальным масштабированием */
+            background-position: center;              /* с позиционированием по центру */
+        }
+
+
+        div {
+            background-image: url(this.jpg), url(that.gif), url(theother.png); /* Добавление нескольких фоновых изображений */
+            background: url(bg.png), url(bullet.png) 0 50% no-repeat, url(arrow.png) right no-repeat;  /* Кнопка с отдельным фоном, маркером и стрелочкой */ 
+        }
+
+
+
+
+
+/* WORK WITH LINEAR AND RADIAL GRADIENTS */
+
+        div {
+            background: linear-gradient(20deg, yellow, red);
+            background: linear-gradient(hsl(0,100%,50%),hsl(60,100%,50%),hsl(120,100%,50%),hsl(180,100%,50%),hsl(240,100%,50%),hsl(300,100%,50%));
+            background: radial-gradient(at top left, yellow, green);
+            background: -webkit-radial-gradient(100px 200px, circle closest-side, black, white);        /* Используется для Сафари и старых версий Хром */
+            background: radial-gradient(#06c 0, #fc50 50%, #039 100%);
+            background: repeating-radial-gradient(black, black 15px, white 15px, white 30px);       /* Черно-белые круги */ 
+            background: repeating-linear-gradient(white, black 15px, white 30px);        /* Черно-белые полосы */ 
+        }
+
+
+
+
+
+/* 
+ФЛЕКСБОКС - Флекбокс позволяет создавать практически любые лэйауты, контролируя выравнивание, расположение, размещение и размер боксов 
+Есть Флекс контейнер, в него вложен Флекс-айтем (флекс-элемент). Флекс айтем может быть сам в дальнейшем контейнером. 
+
+Задав свойству значение flex, мы сообщим браузеру, что все, что находится в боксе должно быть отрендерено именно как флекс-элемент.
+*/
+        .menu-container {
+            /* ГОРИЗОНТАЛЬНОЕ ВЫРАВНИВАНИЕ */
+            display: flex;
+        }
+        /* флекс контейнер с одним элементом внутри */
+
+        .menu-container {
+            /* ... */
+            display: flex;
+            justify-content: center; /* горизонтальное выравнивание элементов внутри контейнера */  
+          }
+
+          /* У justify-content также есть и следующие значения:
+                center
+                flex-start
+                flex-end
+                space-around
+                space-between
+                space-evenly */
+
+        .menu {
+            width: 900px;
+            display: flex;
+            justify-content: space-around;
+            border: 1px solid #fff;
+        }        
+        /* Такой код превращает .menu во вложенный флекс-контейнер, а значение space-around распределяет элементы по всей его ширине. */
+
+
+        /* ВЕРТИКАЛЬНОЕ ВЫРАВНИВАНИЕ */
+
+            .header-container {
+                display: flex;
+                justify-content: center;
+                background-color: #f1eeee;
+                color: #000000;
+            }
+            
+            .header {
+                width: 900px;
+                height: 300px; 
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                /* Для вертикального выравнивания должна быть указана HEIGHT. 
+                Вертикальное выравнивание делается с помощью добавление свойства align-items во флекс-контейнре. */
+            }
+
+            /* У свойства align-items похожие на justify-content значения:
+                    center
+                    flex-start (top)
+                    flex-end (bottom)
+                    stretch
+                    baseline */
+
+            
+            
+            /* Можно по вертикали выровнять каждый элемент отдельно с помощью свойства align-self. 
+            Если мы добавим его к нашему флекс-элементу, то оно перекроет правило align-items из контейнера */
+
+                    .social,
+                    .subscribe {
+                    align-self: stretch;
+                    margin-bottom: 20px; /* Отступ снизу */
+                    
+                    }

@@ -1,0 +1,86 @@
+/* * .h1, h2, h3 {
+    margin-top: 96px;
+    margin-left: 65px;
+    box-sizing: border-box;
+} */
+
+body {
+   margin-top: 96px;
+   margin-left: 65px;
+   margin-right: 65px;
+   margin-bottom: 98px;
+   box-sizing: border-box;
+}
+
+h1 {
+    background-color: black;
+    color: #FFFF;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+h2 {
+    background-color: black;
+    color: #FFFF;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    font-weight: 295;
+}
+
+h3 {
+    background-color: black;
+    color: #FFFF;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: 295;
+    margin-left: 70px;
+}
+
+p, ul {
+    color: black;
+    background-color: #FFFF;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+        
+    margin-top: 53px;
+    margin-bottom: 53px;
+    box-sizing: border-box;
+
+    /* WORK WITH LINEAR AND RADIAL GRADIENTS */
+
+    background: linear-gradient(20deg, yellow, red);
+    background: linear-gradient(hsl(0,100%,50%),hsl(60,100%,50%),hsl(120,100%,50%),hsl(180,100%,50%),hsl(240,100%,50%),hsl(300,100%,50%));
+    background: radial-gradient(at top left, yellow, green);
+    background: -webkit-radial-gradient(100px 200px, circle closest-side, black, white);        /* Используется для Сафари и старых версий Хром */
+    background: radial-gradient(#06c 0, #fc50 50%, #039 100%);
+    background: repeating-radial-gradient(black, black 15px, white 15px, white 30px);       /* Черно-белые круги */ 
+    background: repeating-linear-gradient(white, black 15px, white 30px);        /* Черно-белые полосы */ 
+}
+
+.alignment {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+
+    margin-left: 70px;
+}
+
+/* ДОБАВЛЕНИЕ ФОНОВОГО ИЗОБРАЖЕНИЯ */
+
+div {
+    width: 800px;
+    height: 300px;
+  
+    background-image: url('images/hehe.png');
+    background-size: cover;                   /* добавление фона с максимальным масштабированием */
+    background-position: center;              /* с позиционированием по центру */
+}
+
+/* background-image: url(this.jpg), url(that.gif), url(theother.png); /* Добавление нескольких фоновых изображений */
+/* background: url(bg.png), url(bullet.png) 0 50% no-repeat, url(arrow.png) right no-repeat;  кнопка с отдельным фоном, маркером и стрелочкой */ 
