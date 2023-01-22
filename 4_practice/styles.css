@@ -5,13 +5,13 @@
 }
 
 .header {
-    height: 140px;
+    height: 110px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     background-color: #FFFF;    
-    position: relative; 
-    z-index: 2;
+    position: fixed; 
+    z-index: 1;
 }
 
 .logo {
@@ -50,7 +50,7 @@ a:hover {
     height: 950px;
     background-image: url('images/evian_origins_logo.png');
     background-size:cover;
-    background-position:center;
+    background-position: top center;
 }
 
 .hero-title {
@@ -64,9 +64,10 @@ a:hover {
 }
 
 .upper-block {
+    width: 1040px;
     margin-top: 150px;
-    margin-left: 201px;
-    margin-right: 199px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 150px;
     padding: 24px;
     font-family: Arial, Helvetica, sans-serif;
@@ -76,9 +77,10 @@ a:hover {
   }
 
 .bottom-block {
+    width: 1040px;
     margin-top: 150px;
-    margin-left: 201px;
-    margin-right: 199px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 150px;
     display: flex;
     justify-content: flex-start;
@@ -97,8 +99,10 @@ a:hover {
 }
 
 .images {
+    width: 1040px;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .wang {
